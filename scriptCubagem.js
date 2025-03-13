@@ -10,17 +10,27 @@ function botaoClicado() {
 
   let resultOfMultiply = Number(num1) * Number(num2) * Number(num3);
 
-  if (sector.value == "rodoviario") {
-    resultCubagem.innerHTML = Number(resultOfMultiply) * 300;
-  }
 
-  if (sector.value == "aereo") {
-    resultCubagem.innerHTML = Number(resultOfMultiply) * 167;
-  }
+  if (num1=="" || num2=="" || num3==""){
+    alert("Preencha os campos de metragem")
 
-  if (sector.value == "maritimo") {
-    resultCubagem.innerHTML = Number(resultOfMultiply) * 1000;
+    location.reload();
+  } else{
+    if (sector.value == "rodoviario") {
+      resultCubagem.innerHTML = Number(resultOfMultiply) * 300;
+    }
+  
+    if (sector.value == "aereo") {
+      resultCubagem.innerHTML = Number(resultOfMultiply) * 167;
+    }
+  
+    if (sector.value == "maritimo") {
+      resultCubagem.innerHTML = Number(resultOfMultiply) * 1000;
+    }
+
+    sector.addEventListener("change", botaoClicado);
   }
+  
 
 }
 
@@ -33,4 +43,4 @@ function recarregarPagina() {
   location.reload();
 }
 
-sector.addEventListener("change", botaoClicado);
+
