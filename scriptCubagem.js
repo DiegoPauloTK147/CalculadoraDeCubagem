@@ -22,7 +22,9 @@ function botaoClicado() {
     resultCubagem.innerHTML = Number(resultOfMultiply) * 1000;
   }
 
-  
+}
+
+function changeButton(){
   botaoCalcular.style.display = "none";
   botaoReset.style.display = "block";
 }
